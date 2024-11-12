@@ -13,73 +13,17 @@ import org.openqa.selenium.WebElement;
 
 public class pharmacy_Pages extends StartupPage {
 
-	By usernameTextbox = By.xpath(" ");
-	By passwordTextbox = By.xpath(" ");
-	By signInButton = By.xpath(" ");
-	By pharmacyTabXpath = By.xpath(" ");
-	By orderTabXpath = By.xpath(" ");
-	By supplierTabXpath = By.xpath(" ");
-	By reportTabXpath = By.xpath(" ");
-	By settingTabXpath = By.xpath(" ");
-	By storeTabXpath = By.xpath(" ");
-	By supplierLedgerTabXpath = By.xpath(" ");
-	By substoreRequestAndDispatchTabXpath = By.xpath(" ");
-	By purchaseOrderSubTabXpath = By.xpath(" ");
-	By goodsReceiptSubTabXpath = By.xpath(" ");
-	By agingDaysFromXpath = By.xpath(" ");
-	By agingDaysToXpath = By.xpath(" ");
-	public By searchBarId = By.id(" ");
-	public By supplierNameDropdownXpath = By.xpath(" ");
-	public By showDetails = By.xpath(" ");
-	By calendarFromDropdown = By.xpath(" ");
-	By calendarToDropdown = By.xpath(" ");
-	By okButtonXpath = By.xpath(" ");
-	By filterDropdownXpath = By.xpath(" ");
-	By radiButtonCompleteXpath = By.xpath(" ");
-	public By radiButtonCancelledXpath = By.xpath(" ");
-	By radiButtonAllXpath = By.xpath(" ");
-	By homepageLogo = By.cssSelector(" ");
-	By printReceiptButtonId = By.id(" ");
-	public By updateReceiptButtonId = By.id(" ");
-	By itemNameId = By.id("  ");
-	By batchNumberId = By.id(" ");
-	By quantityId = By.id(" ");
-	By rateId = By.id("  ");
-	By saveButtonId = By.id(" ");
-	By mrpId = By.id(" ");
-	By supplierNameDropdownId = By.id(" ");
-	By invoiceNumberFieldId = By.id(" ");
-	By paymentModeDropdownId = By.id("  ");
-	By closeModalButtonXpath = By.xpath(" ");
 	public By closeModalButtonXpath2 = By.xpath(" ");
-	By expiryDateFieldId = By.id(" ");
-	By addNewItemModalXpath = By.xpath(" ");
-	By modalXpath = By.xpath(" ");
-	By favouriteOrStarIcon = By.xpath(" ");
-	By goodReceiptTableDataRow = By.cssSelector(" ");
-	public By editGRButton = By.cssSelector(" ");
-	public By cancelGoodsReceiptSButton = By.id(" ");
-	public By cancelRemarks = By.id(" ");
-	public By proceedButton = By.xpath(" ");
+	public By showDetails = By.xpath(" ");
 	public By editGoodsRecordButton = By.id(" ");
+	public By updateReceiptButtonId = By.id(" ");
+	public By cancelGoodsReceiptSButton = By.id(" ");
+	public By proceedButton = By.xpath(" ");
+	public By radiButtonCancelledXpath = By.xpath(" ");
 	public By cancelledStamp = By.xpath(" ");
-	By actualDatesOfGoodReceiptTableXpath = By
-			.xpath(" ");
-	By gridXpath = By.xpath(" ");
-	By actualDatesOfPurchaseOrderTableXpath = By.xpath(" ");
-	By purchaseOrderXpath = By.xpath(" ");
-	public By patientTabXpath = By.xpath(" ");
-	public By registerPatient = By.xpath(" ");
-	public By profilePicture = By.cssSelector(" ");
-	public By newPhoto = By.xpath(" ");
-	public By chooseFileButton = By.cssSelector(" ");
-	public By doneButton = By.xpath(" ");
-	public By uploadedImage = By.cssSelector(" ");
-	public By uploadedProfilePhotoXpath = By.xpath(" ");
-
-	private By tabXpath;
 
 	String pageName = this.getClass().getSimpleName();
+	
 
 	public pharmacy_Pages(WebDriver driver) {
 		super(driver);
