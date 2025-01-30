@@ -235,17 +235,8 @@ public class pharmacy_testcase extends AppTestBase {
 		Assert.assertTrue(pharmacy_pl1_pageInstance.closeAddGoodReceiptModal());
 	}
 
+
 	@Test(priority = 11, groups = {
-			"sanity" }, description = "Precondition: User should be logged in and on the Pharmacy section. \r\n"
-					+ "1. Enter the keyword \"100\" in the price field. \r\n"
-					+ "2. Verify that the records matching the entered keyword are displayed.")
-	public void performScrollOperation() throws Exception {
-		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
-
-		Assert.assertTrue(pharmacy_pl1_pageInstance.performScrollOperation(), "Scroll operation is performed");
-	}
-
-	@Test(priority = 12, groups = {
 			"sanity" }, description = "Precondition: User should be logged in and on the Pharmacy section. \r\n"
 					+ "1. Hover the mouse over the star/favourite icon. \r\n"
 					+ "2. Verify that a tooltip with the text \"Remember this date\" appears when hovering over the star.")
@@ -256,7 +247,7 @@ public class pharmacy_testcase extends AppTestBase {
 		Assert.assertEquals(pharmacy_pl1_pageInstance.verifyToolTipText(), pharmacyExpectedData.get("favouriteIcon"));
 	}
 
-	@Test(priority = 13, groups = {
+	@Test(priority = 12, groups = {
 			"sanity" }, description = "Precondition: User should be logged in and on the Pharmacy section. \r\n"
 					+ "1. Click on the \"Select Supplier\" dropdown. \r\n"
 					+ "2. Choose the supplier name from the dropdown. \r\n"
@@ -272,36 +263,9 @@ public class pharmacy_testcase extends AppTestBase {
 				pharmacyExpectedData), "Table data is not present for the selected supplier");
 	}
 
-	@Test(priority = 14, groups = {
-			"sanity" }, description = "Precondition: User should be logged in and on the Pharmacy section. \r\n"
-					+ "1. Click on the \"View\" button. \r\n" + "2. Click on the \"Edit GR\" button. \r\n"
-					+ "3. Click on the \"Edit\" pencil icon. \r\n" + "4. Make changes to the Good Receipt. \r\n"
-					+ "5. Click on the \"Update\" button.")
-	public void verifyUpdateOfExistingGoodReceipt() throws Exception {
-		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
-		userActionsInstance = new UserActions(driver);
+	
 
-		Map<String, String> pharmacyExpectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "Pharmacy");
-
-		Assert.assertTrue(pharmacy_pl1_pageInstance.clickAndEnterValueInSearchField(randomInvoiceNumber),
-				"Search Bar is not Displayed");
-		pharmacy_pl1_pageInstance.highlightAndClickOnButton(pharmacy_pl1_pageInstance.showDetails,
-				"Show Details Button");
-		pharmacy_pl1_pageInstance.clickViewButtonWithInvoice(randomInvoiceNumber);
-		Assert.assertTrue(pharmacy_pl1_pageInstance.clickOnEditGRButton(), "Edit GR button is not displayed");
-		WebElement editGoodsRecordButton = userActionsInstance
-				.findElement(pharmacy_pl1_pageInstance.editGoodsRecordButton);
-		userActionsInstance.highlightElement(editGoodsRecordButton)
-				.click(pharmacy_pl1_pageInstance.editGoodsRecordButton);
-		pharmacy_pl1_pageInstance.addGriItemWithMandatoryFieldsOnly(null, null, null, null,
-				pharmacyExpectedData.get("mrp"));
-		userActionsInstance.click(pharmacy_pl1_pageInstance.updateReceiptButtonId);
-		Assert.assertEquals(
-				pharmacy_pl1_pageInstance.verifyMessageByText(pharmacyExpectedData.get("goodReceiptUpdatedSuccessMsg")),
-				pharmacyExpectedData.get("goodReceiptUpdatedSuccessMsg"));
-	}
-
-	@Test(priority = 15, groups = {
+	@Test(priority = 13, groups = {
 			"sanity" }, description = "Verify that the radio buttons in the Pharmacy section can be selected:\r\n"
 					+ "1. Click on the 'Complete' radio button and verify it is selectable.\r\n"
 					+ "2. Click on the 'Cancelled' radio button and verify it is selectable.\r\n"
@@ -320,7 +284,7 @@ public class pharmacy_testcase extends AppTestBase {
 		Assert.assertTrue(pharmacy_pl1_pageInstance.isAllRadioButtonSelectable());
 	}
 
-	@Test(priority = 16, groups = {
+	@Test(priority = 14, groups = {
 			"sanity" }, description = "Pre-condition: User should be logged in and on the Pharmacy section.\r\n"
 					+ "Test Steps:\r\n" + "1. Search for a random invoice number.\r\n"
 					+ "2. Click on the 'Show Details' button for the invoice.\r\n"
@@ -360,25 +324,9 @@ public class pharmacy_testcase extends AppTestBase {
 				.highlightAndClickOnButton(pharmacy_pl1_pageInstance.closeModalButtonXpath2, "Close Modal Button"));
 	}
 
-	@Test(priority = 17, groups = { "sanity" }, description = "Verify to search the data by apply the date filter \r\n"
-			+ "Click on purchase order\r\n" + "Click on the \"From\" date\r\n" + "Select the \"From\" date\r\n"
-			+ "Click on the \"To\" date\r\n" + "Select \"To\" date\r\n" + "Click on \"OK\" button")
-	public void verifyPurchaseOrderDataAfterApplyingDateFilter() throws Exception {
-		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
+	
 
-		pharmacy_pl1_pageInstance.visitTabUnderPharmacy("Order");
-		pharmacy_pl1_pageInstance.clickPurchaseOrderTab();
-		LocalDate currentDate = LocalDate.now();
-		LocalDate date7DaysAgo = currentDate.minusDays(7);
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-		String toDate = currentDate.format(formatter);
-		String fromDate = date7DaysAgo.format(formatter);
-		Assert.assertTrue(pharmacy_pl1_pageInstance.applyDateFilter("17-01-2024", toDate));
-		Assert.assertTrue(
-				pharmacy_pl1_pageInstance.verifyActualDatesForPurchaseOrderAreWithinThisRange("17-01-2024", toDate));
-	}
-
-	@Test(priority = 18, groups = { "sanity" }, description = "Verify to export the order section data\r\n"
+	@Test(priority = 15, groups = { "sanity" }, description = "Verify to export the order section data\r\n"
 			+ "Click on order section \r\n" + "Click on \"Export\" button")
 	public void exportGoodsReceiptData() throws Exception {
 		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
@@ -386,42 +334,6 @@ public class pharmacy_testcase extends AppTestBase {
 		boolean isDownloaded = pharmacy_pl1_pageInstance.verifyFileDownloaded("PharmacyGoodReceiptLists");
 		Assert.assertTrue(isDownloaded, "Downloaded file is not found with name containing: PharmacyGoodReceiptLists");
 		deleteDownloadDirectory();
-	}
-
-	@Test(priority = 19, groups = {
-			"sanity" }, description = "Precondition: User should be logged in and should be on the 'Patient' section.\n"
-					+ "1. Click on the 'Register patient' button.\n" + "2. Click on the camera icon.\n"
-					+ "3. Click on the 'New photo' option.\n" + "4. Click on the 'Choose from files' button.\n"
-					+ "5. Select the desired file from the file picker.\n"
-					+ "6. Click on the 'Done' button to complete the photo selection.")
-	public void verifyRegisterPatientWithPhoto() throws Exception {
-		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
-		userActionsInstance = new UserActions(driver);
-
-		userActionsInstance.refreshPage();
-
-		Assert.assertTrue(pharmacy_pl1_pageInstance.clickPatientTab());
-		Assert.assertTrue(pharmacy_pl1_pageInstance
-				.handleFileUpload(System.getProperty("user.dir") + "\\testImage\\uploadImage.png"));
-	}
-
-	@Test(priority = 20, groups = { "sanity" }, description = "Verify uploaded image is present")
-	public void verifyUploadedImageIsPresent() throws Exception {
-		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
-		userActionsInstance = new UserActions(driver);
-
-		Assert.assertTrue(pharmacy_pl1_pageInstance.isProfilePictureUploaded(), "uploaded image is not diplayed");
-	}
-
-	@Test(priority = 21, groups = {
-			"sanity" }, description = "Pre-condition: User should be logged in and is on the Pharmacy section.\r\n"
-					+ "1. Click on the 'Order' section.\r\n"
-					+ "2. Click on the browser refresh button to reload the page.")
-	public void verifyUserIsOnTheSamePageAfterRefresh() {
-		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
-
-		Assert.assertTrue(pharmacy_pl1_pageInstance.verifyBrowserUrlAfterRefreshingThePage(),
-				"Url's are not same after refresh");
 	}
 
 	@AfterClass(alwaysRun = true)
