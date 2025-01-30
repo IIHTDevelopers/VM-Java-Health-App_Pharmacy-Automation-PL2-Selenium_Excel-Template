@@ -125,12 +125,10 @@ public class pharmacy_Pages extends StartupPage {
 		return false;
 	}
 
-	private void setTabXpath(String tabName) {
-		
-	}
+	
 
 	/**
-	 * @Test4.1, @Test5.1, @Test6.1 @Test7.1 @Test15.1 @Test15.2 and @Test17.1 about
+	 * @Test4.1, @Test5.1, @Test6.1 @Test7.1 @Test12.1 @Test13.2 about
 	 * this method visitOrderTabUnderPharmacy()
 	 * 
 	 * @param : null
@@ -286,7 +284,7 @@ public class pharmacy_Pages extends StartupPage {
 	 * @author : YAKSHA
 	 */
 	public String verifySelectedTabIsActiveOrNot() throws Exception {
-		String locatorAttributeValue = "";
+		
 		return null;
 	}
 
@@ -327,7 +325,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test6.4, @Test7.6 @Test14.6 and @Test16.6 about this method
+	 * @Test6.4, @Test7.6 and @Test14.6 about this method
 	 * verifyMessageByText()
 	 * 
 	 * @param messageText - the text to match within the message element
@@ -368,7 +366,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test7.4 and @Test14.5 about this method addGriItemWithMandatoryFieldsOnly()
+	 * @Test7.4 about this method addGriItemWithMandatoryFieldsOnly()
 	 * 
 	 * @param itemName    - the name of the item to be added
 	 * @param batchNumber - the batch number of the item
@@ -424,7 +422,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test8.4 @Test10.3 @Test14.3 @Test16.3 @Test16.9 about this method
+	 * @Test8.4 @Test10.3 @Test14.3 @Test14.9 about this method
 	 * clickViewButtonWithInvoice()
 	 * 
 	 * @param : String
@@ -455,7 +453,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test8.2 @Test10.1 @Test14.1 @Test16.1 about this method
+	 * @Test8.2 @Test10.1 @Test14.1 about this method
 	 * clickAndEnterValueInSearchField()
 	 * 
 	 * @param : String
@@ -470,7 +468,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test12 about this method verifyToolTipText()
+	 * @Test11 about this method verifyToolTipText()
 	 * @param : null
 	 * @description : Verify the text of the tooltip
 	 * @return : String
@@ -482,7 +480,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test13 about this method
+	 * @Test12 about this method
 	 *         verifyGoodsReceiptTableDataIsPresentAfterEnteringSupplierName()
 	 * 
 	 * @param : null
@@ -496,21 +494,9 @@ public class pharmacy_Pages extends StartupPage {
 		return false;
 	}
 
-	/**
-	 * @Test14.4 about this method clickOnEditGRButton()
-	 * 
-	 * @param : null
-	 * @description : Clicks on the edit GR button
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue clicking the edit GR button
-	 * @author : YAKSHA
-	 */
-	public boolean clickOnEditGRButton() {
-		return false;
-	}
 
 	/**
-	 * @Test8.3 @Test9.2 @Test10.2 @Test14.2 @Test16.2 @Test16.4 @Test16.7 @Test16.8 @Test16.11
+	 * @Test8.3 @Test9.2 @Test10.2 @Test14.2 @Test14.4 @Test14.7 @Test14.8 @Test14.11
 	 * about this method highlightAndClickOnButton()
 	 * 
 	 * @param : By, String
@@ -524,20 +510,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test11 about this method performScrollOperation()
-	 * @param : null
-	 * @description : Scrolls till Pharmacy tab, selects it, and clicks "Order" sub
-	 *              tab
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue finding the tab
-	 * @author : YAKSHA
-	 */
-	public boolean performScrollOperation() {
-		return false;
-	}
-
-	/**
-	 * @Test9.1 @Test17.3 about this method applyDateFilter()
+	 * @Test9.1 about this method applyDateFilter()
 	 * 
 	 * @param : String, String
 	 * @description : Applies the date filter with date range
@@ -564,7 +537,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test16.5 about this method enterRemarksAndClickOnProceed()
+	 * @Test14.5 about this method enterRemarksAndClickOnProceed()
 	 * 
 	 * @param : WebElement
 	 * @description : Enters remarks and clicks on the "Proceed" button
@@ -578,7 +551,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test16.10 about this method verifyRecordStatusFromInvoce()
+	 * @Test14.10 about this method verifyRecordStatusFromInvoce()
 	 * 
 	 * @param : WebElement
 	 * @description : Verify the record status from invoice
@@ -591,7 +564,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test15.3 about this method clickCompleteRadioButton()
+	 * @Test13.3 about this method clickCompleteRadioButton()
 	 * 
 	 * @param : null
 	 * @description : Clicks on the "Complete" radio button
@@ -604,7 +577,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test15.4 about this method isCompleteRadioButtonSelectable()
+	 * @Test13.4 about this method isCompleteRadioButtonSelectable()
 	 * 
 	 * @param : null
 	 * @description : Verify whether the "Complete" radio button is selectable
@@ -617,7 +590,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test15.5 about this method clickCancelledRadioButton()
+	 * @Test13.5 about this method clickCancelledRadioButton()
 	 * 
 	 * @param : null
 	 * @description : Clicks the "Cancelled" radio button
@@ -630,7 +603,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test15.6 about this method isCancelledRadioButtonSelectable()
+	 * @Test13.6 about this method isCancelledRadioButtonSelectable()
 	 * 
 	 * @param : null
 	 * @description : Verify whether the "Cancelled" radio button is selectable
@@ -643,7 +616,7 @@ public class pharmacy_Pages extends StartupPage {
 		}
 
 	/**
-	 * @Test15.7 about this method clickAllRadioButton()
+	 * @Test13.7 about this method clickAllRadioButton()
 	 * 
 	 * @param : null
 	 * @description : Clicks the "All" radio button
@@ -656,7 +629,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test15.8 about this method isAllRadioButtonSelectable()
+	 * @Test13.8 about this method isAllRadioButtonSelectable()
 	 * 
 	 * @param : null
 	 * @description : Verify whether the "All" radio button is selectable
@@ -668,36 +641,12 @@ public class pharmacy_Pages extends StartupPage {
 		return false;
 	}
 
-	/**
-	 * @Test17.4 about this method
-	 * verifyActualDatesForPurchaseOrderAreWithinThisRange()
-	 * 
-	 * @param : String fromDate, String toDate
-	 * @description : Verify if the actual dates for purchase orders are within the
-	 *              specified date range
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue parsing the dates
-	 * @author : YAKSHA
-	 */
-	public boolean verifyActualDatesForPurchaseOrderAreWithinThisRange(String fromDate, String toDate) {
-		return false;
-	}
+	
+
+	
 
 	/**
-	 * @Test17.2 about this method clickPurchaseOrderTab()
-	 * 
-	 * @param : null
-	 * @description : Clicks the "Purchase Order" tab
-	 * @return : void
-	 * @throws : Exception - if there is an issue finding the tab element
-	 * @author : YAKSHA
-	 */
-	public void clickPurchaseOrderTab() throws Exception {
-		
-	}
-
-	/**
-	 * @Test18 about this method verifyFileDownloaded()
+	 * @Test15 about this method verifyFileDownloaded()
 	 * 
 	 * @param : String partialFileName
 	 * @description : Verify if a file with the specified partial name has been
@@ -709,65 +658,6 @@ public class pharmacy_Pages extends StartupPage {
 	 */
 	public boolean verifyFileDownloaded(String partialFileName) throws InterruptedException {
 		return false;	
-		}
-
-	/**
-	 * @Test19.1 about this method clickPatientTab()
-	 * 
-	 * @param : String
-	 * @description : Clicks on the "Patient" tab
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue clicking the tab
-	 * @author : YAKSHA
-	 */
-	public boolean clickPatientTab() throws Exception {
-		return false;
-	}
-
-	/**
-	 * @Test19.2 about this method handleFileUpload()
-	 * 
-	 * @param : String pathOfTheFile - the file path of the file to be uploaded
-	 * @description : This method handles the file upload process by interacting
-	 *              with various elements on the page such as the register patient
-	 *              button, profile picture, and file selection dialog. It waits for
-	 *              the elements to be visible, clicks them, and uploads the
-	 *              specified file.
-	 * @return : boolean - true if the file is successfully uploaded, false
-	 *         otherwise
-	 * @throws : Exception - if there is an issue during the file upload process
-	 * @author : YAKSHA
-	 */
-	public boolean handleFileUpload(String pathOfTheFile) throws Exception {
-		return false;
-	}
-
-	/**
-	 * @Test20 about this method isProfilePictureUploaded()
-	 * 
-	 * @param : null
-	 * @description : This method verifies if the profile picture has been uploaded
-	 *              by navigating to the profile picture section and checking if an
-	 *              element matching the uploaded profile photo XPath is present.
-	 * @return : boolean - true if the profile picture is uploaded, false otherwise
-	 * @throws : Exception - if there is an issue finding or clicking elements, or
-	 *           verifying the upload
-	 * @author : YAKSHA
-	 */
-	public boolean isProfilePictureUploaded() throws Exception {
-		return false;
-	}
-
-	/**
-	 * @Test21 about this method verifyBrowserUrlAfterRefreshingThePage()
-	 * @param : null
-	 * @description : Verify the URL is same after refreshing the page
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue reloading the page
-	 * @author : YAKSHA
-	 */
-	public boolean verifyBrowserUrlAfterRefreshingThePage() {
-		return false;
 		}
 
 }
