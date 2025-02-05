@@ -128,7 +128,7 @@ public class pharmacy_Pages extends StartupPage {
 	
 
 	/**
-	 * @Test4.1, @Test5.1, @Test6.1 @Test7.1 @Test12.1 @Test13.2 about
+	 * @Test4.1, @Test5.1, @Test6.1 @Test7.1 @Test12.1 about
 	 * this method visitOrderTabUnderPharmacy()
 	 * 
 	 * @param : null
@@ -325,7 +325,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test6.4, @Test7.6 and @Test14.6 about this method
+	 * @Test6.4, @Test7.6 and about this method
 	 * verifyMessageByText()
 	 * 
 	 * @param messageText - the text to match within the message element
@@ -422,7 +422,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test8.4 @Test10.3 @Test14.3 @Test14.9 about this method
+	 * @Test8.4 @Test10.3 about this method
 	 * clickViewButtonWithInvoice()
 	 * 
 	 * @param : String
@@ -453,7 +453,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test8.2 @Test10.1 @Test14.1 about this method
+	 * @Test8.2 @Test10.1 about this method
 	 * clickAndEnterValueInSearchField()
 	 * 
 	 * @param : String
@@ -496,7 +496,7 @@ public class pharmacy_Pages extends StartupPage {
 
 
 	/**
-	 * @Test8.3 @Test9.2 @Test10.2 @Test14.2 @Test14.4 @Test14.7 @Test14.8 @Test14.11
+	 * @Test8.3 @Test9.2 @Test10.2 
 	 * about this method highlightAndClickOnButton()
 	 * 
 	 * @param : By, String
@@ -535,129 +535,6 @@ public class pharmacy_Pages extends StartupPage {
 	public boolean verifyActualDatesAreWithinThisRange(String fromDate, String toDate) {
 		return false;
 	}
-
-	/**
-	 * @Test14.5 about this method enterRemarksAndClickOnProceed()
-	 * 
-	 * @param : WebElement
-	 * @description : Enters remarks and clicks on the "Proceed" button
-	 * @return : void
-	 * @throws : Exception - if there is an issue finding, filling, or clicking the
-	 *           element
-	 * @author : YAKSHA
-	 */
-	public void enterRemarksAndClickOnProceed(By element) {
-		
-	}
-
-	/**
-	 * @Test14.10 about this method verifyRecordStatusFromInvoce()
-	 * 
-	 * @param : WebElement
-	 * @description : Verify the record status from invoice
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue finding the element
-	 * @author : YAKSHA
-	 */
-	public boolean verifyRecordStatusFromInvoce(By element) {
-		return false;
-	}
-
-	/**
-	 * @Test13.3 about this method clickCompleteRadioButton()
-	 * 
-	 * @param : null
-	 * @description : Clicks on the "Complete" radio button
-	 * @return : void
-	 * @throws : Exception - if there is an issue finding the radio button
-	 * @author : YAKSHA
-	 */
-	public void clickCompleteRadioButton() throws Exception {
-		
-	}
-
-	/**
-	 * @Test13.4 about this method isCompleteRadioButtonSelectable()
-	 * 
-	 * @param : null
-	 * @description : Verify whether the "Complete" radio button is selectable
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue finding the radio button
-	 * @author : YAKSHA
-	 */
-	public boolean isCompleteRadioButtonSelectable() throws Exception {
-		return false;	
-	}
-
-	/**
-	 * @Test13.5 about this method clickCancelledRadioButton()
-	 * 
-	 * @param : null
-	 * @description : Clicks the "Cancelled" radio button
-	 * @return : void
-	 * @throws : Exception - if there is an issue finding the radio button
-	 * @author : YAKSHA
-	 */
-	public void clickCancelledRadioButton() throws Exception {
-		
-	}
-
-	/**
-	 * @Test13.6 about this method isCancelledRadioButtonSelectable()
-	 * 
-	 * @param : null
-	 * @description : Verify whether the "Cancelled" radio button is selectable
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue finding the radio button
-	 * @author : YAKSHA
-	 */
-	public boolean isCancelledRadioButtonSelectable() throws Exception {
-		return false;
-		}
-
-	/**
-	 * @Test13.7 about this method clickAllRadioButton()
-	 * 
-	 * @param : null
-	 * @description : Clicks the "All" radio button
-	 * @return : void
-	 * @throws : Exception - if there is an issue finding the radio button
-	 * @author : YAKSHA
-	 */
-	public void clickAllRadioButton() throws Exception {
-		
-	}
-
-	/**
-	 * @Test13.8 about this method isAllRadioButtonSelectable()
-	 * 
-	 * @param : null
-	 * @description : Verify whether the "All" radio button is selectable
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue finding the radio button
-	 * @author : YAKSHA
-	 */
-	public boolean isAllRadioButtonSelectable() throws Exception {
-		return false;
-	}
-
 	
-
-	
-
-	/**
-	 * @Test15 about this method verifyFileDownloaded()
-	 * 
-	 * @param : String partialFileName
-	 * @description : Verify if a file with the specified partial name has been
-	 *              downloaded
-	 * @return : boolean
-	 * @throws : InterruptedException - if the thread is interrupted while waiting
-	 *           for the file to download
-	 * @author : YAKSHA
-	 */
-	public boolean verifyFileDownloaded(String partialFileName) throws InterruptedException {
-		return false;	
-		}
 
 }
